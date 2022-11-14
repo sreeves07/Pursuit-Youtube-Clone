@@ -14,7 +14,6 @@ import Avatar from '@material-ui/core/Avatar';
 const Header = () => {
     return (
         <div className="header">
-            {/* <h1>Youtube</h1> */}
 
             <div className="header__left">
                 <MenuIcon />
