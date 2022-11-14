@@ -18,11 +18,11 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <SideBarRow selected Icon={HomeIcon} title="Home" />
-            <SideBarRow Icon={WhatshotIcon} title="Trending" />
-            <SideBarRow Icon={SubscriptionIcon} title="Subscriptions" />
+            <SideBarRow Icon={WhatshotIcon} title="About" />
+            <SideBarRow Icon={SubscriptionIcon} title="Trending" />
             <hr />
 
-            <SideBarRow Icon={VideoLibraryIcon} title="About" />
+            <SideBarRow Icon={VideoLibraryIcon} title="Library" />
             <SideBarRow Icon={HistoryIcon} title="History" />
             <SideBarRow Icon={OndemandIcon} title="Your Videos" />
             <SideBarRow Icon={WatchLaterIcon} title="Watch Later" />
