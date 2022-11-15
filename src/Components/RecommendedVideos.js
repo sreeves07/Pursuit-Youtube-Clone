@@ -5,10 +5,10 @@ import './RecommendedVideos.css'
 import { fetchData } from './Fetch';
 
 const RecommendedVideos = () => {
-    useEffect(() => {
-        fetchData()
-            .then((data) => console.log(data))
-    },[])
+    // useEffect(() => {
+    //     fetchData()
+    //         .then((data) => console.log(data))
+    // },[])
 
     return (
         <div className='recommendedVideos'>
