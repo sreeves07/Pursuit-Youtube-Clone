@@ -19,13 +19,13 @@ import './Sidebar.css'
 const Sidebar = () => {
     return (
         <div className='sidebar'>
-            <Link to="/">
+            {/* <Link to="/"> */}
                 <SideBarRow selected Icon={HomeIcon} title="Home" />
-            </Link>
+            {/* </Link> */}
 
-            <Link to="/about">
+            {/* <Link to="/about"> */}
                 <SideBarRow Icon={WhatshotIcon} title="About" />
-            </Link>
+            {/* </Link> */}
             <SideBarRow Icon={SubscriptionIcon} title="Trending" />
             <hr />
             {/* <SideBarRow Icon={VideoLibraryIcon} title="Library" />

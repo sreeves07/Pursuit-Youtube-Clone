@@ -13,12 +13,12 @@ const Home = () => {
         <div className="App">
         <Header />
   
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/videos" element={<RecommendedVideos />} />
           <Route path="/videos/:id" element={<VideoCard />} />
-        </Routes>
+        </Routes> */}
         <div className="app__page">
           <Sidebar />
           <RecommendedVideos />
