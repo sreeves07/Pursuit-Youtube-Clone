@@ -30,7 +30,7 @@ const Header = ({ setSearchInput }) => {
                     console.log(err)
                 })
         }
-    },[])
+    })
     return (
         <div className="header">
 
@@ -43,19 +43,21 @@ const Header = ({ setSearchInput }) => {
                 />
             </div>
 
-                <form 
-                className="header__input"
-                onSubmit={(e) => {e.preventDefault()}}>
+                <form className="header__input"
+                    
+                    onSubmit={(e) => {e.preventDefault()}}>
                     <input
                         value={searchBox} 
                         onChange={(e) => handleUserSearch(e)}
                         type="text" 
                         placeholder="Search" />
-                        <button type="submit">
-                            <SearchIcon className='header__inputButton'/>
-                        </button>
-                    
+                    <button type="submit">
+                        <SearchIcon className='header__inputButton'/>
+                    </button>
                 </form>
+            
+
+                
 
             <div className='header__icons'>
                 <VideoCallIcon className='header_icon'/>
