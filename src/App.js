@@ -7,10 +7,12 @@ import VideoCard from './Components/VideoCard';
 import Sidebar from './Components/Sidebar'
 import RecommendedVideos from './Components/RecommendedVideos';
 import './App.css';
+import { fetchData } from './Fetch';
 
 function App() {
-  const [searchInput, setSearchInput] = useState('')
 
+  console.log(fetchData())
+  const [searchInput, setSearchInput] = useState('')
 
   return (
     <div className="App">
