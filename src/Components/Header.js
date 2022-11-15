@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './Header.css'
 
@@ -9,14 +9,28 @@ import AppsIcon from '@material-ui/icons/Apps';
 import NotificationIcon from '@material-ui/icons/Notifications';
 import Avatar from '@material-ui/core/Avatar';
 
+import { fetchData } from '../Fetch';
 
 
-const Header = () => {
+
+const Header = ({ setSearchInput }) => {
     const [searchBox, setSearchBox] = useState("")
 
-    const handleSearchChange = (e) => {
+    const handleUserSearch = (e) => {
         setSearchBox(e.target.value)
     }
+
+    useEffect(() => {
+        if(searchBox) {
+            fetchData(searchBox)
+                .then((res) => {
+                    setSearchInput(res)
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        }
+    },[])
     return (
         <div className="header">
 
@@ -29,13 +43,18 @@ const Header = () => {
                 />
             </div>
 
-                <form className="header__input">
+                <form 
+                className="header__input"
+                onSubmit={(e) => {e.preventDefault()}}>
                     <input
                         value={searchBox} 
-                        onChange={handleSearchChange}
+                        onChange={(e) => handleUserSearch(e)}
                         type="text" 
-                        placeholder="Search"></input>
-                    <SearchIcon className='header__inputButton'/>
+                        placeholder="Search" />
+                        <button type="submit">
+                            <SearchIcon className='header__inputButton'/>
+                        </button>
+                    
                 </form>
 
             <div className='header__icons'>
