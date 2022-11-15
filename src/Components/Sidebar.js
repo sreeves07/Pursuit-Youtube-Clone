@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import SideBarRow from './SidebarRow';
 import HomeIcon from "@material-ui/icons/Home"
@@ -19,19 +19,22 @@ import './Sidebar.css'
 const Sidebar = () => {
     return (
         <div className='sidebar'>
-            <SideBarRow selected Icon={HomeIcon} title="Home" />
-            <SideBarRow Icon={WhatshotIcon} title="About" />
+            {/* <Link to="/"> */}
+                <SideBarRow selected Icon={HomeIcon} title="Home" />
+            {/* </Link> */}
+
+            {/* <Link to="/about"> */}
+                <SideBarRow Icon={WhatshotIcon} title="About" />
+            {/* </Link> */}
             <SideBarRow Icon={SubscriptionIcon} title="Trending" />
             <hr />
-
-            <SideBarRow Icon={VideoLibraryIcon} title="Library" />
-            <SideBarRow Icon={HistoryIcon} title="History" />
-            <SideBarRow Icon={OndemandIcon} title="Your Videos" />
-            <SideBarRow Icon={WatchLaterIcon} title="Watch Later" />
-            <SideBarRow Icon={ThumbUpAltOutlinedIcon} title="Liked Videos" />
-            <SideBarRow Icon={ExpandMoreOutlinedIcon} title="Show more" />
-            <hr />
-
+            {/* <SideBarRow Icon={VideoLibraryIcon} title="Library" />
+                <SideBarRow Icon={HistoryIcon} title="History" />
+                <SideBarRow Icon={OndemandIcon} title="Your Videos" />
+                <SideBarRow Icon={WatchLaterIcon} title="Watch Later" />
+                <SideBarRow Icon={ThumbUpAltOutlinedIcon} title="Liked Videos" />
+                <SideBarRow Icon={ExpandMoreOutlinedIcon} title="Show more" />
+                <hr /> */}
         </div>
     );
 };
