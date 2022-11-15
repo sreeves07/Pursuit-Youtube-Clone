@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './Header.css'
 
@@ -12,6 +12,11 @@ import Avatar from '@material-ui/core/Avatar';
 
 
 const Header = () => {
+    const [searchBox, setSearchBox] = useState("")
+
+    const handleSearchChange = (e) => {
+        setSearchBox(e.target.value)
+    }
     return (
         <div className="header">
 
@@ -24,10 +29,14 @@ const Header = () => {
                 />
             </div>
 
-            <div className="header__input">
-                <input type="text" placeholder="Search"/>
-                <SearchIcon className='header__inputButton'/>
-            </div>
+                <form className="header__input">
+                    <input
+                        value={searchBox} 
+                        onChange={handleSearchChange}
+                        type="text" 
+                        placeholder="Search"></input>
+                    <SearchIcon className='header__inputButton'/>
+                </form>
 
             <div className='header__icons'>
                 <VideoCallIcon className='header_icon'/>
