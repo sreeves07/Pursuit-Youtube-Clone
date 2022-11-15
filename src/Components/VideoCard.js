@@ -5,7 +5,7 @@ import Avatar from "@material-ui/core/Avatar"
 
 const VideoCard = ({ image, title, channel, views, timestamp, channelImage }) => {
     return (
-        <div lassName="videoCard">
+        <div className="videoCard">
             <img src={image} alt="" />
             <div className="videoCard__info">
                 <Avatar className="videoCard__avatar" alt={channel} src={channel} />
