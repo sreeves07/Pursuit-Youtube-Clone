@@ -16,22 +16,19 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Router> */}
+      <Router>
       <Header />
-
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
+      <div className="app__page">
+        <Sidebar />
+        <Routes>
+        <Route path="/" element={<RecommendedVideos/>} />
         <Route path="/about" element={<About />} />
         <Route path="/videos/:id" element={<VideoCard searchInput={searchInput}/>} />
         <Route path="/videos" element={<RecommendedVideos />} />
-        
-      </Routes> */}
-      <div className="app__page">
-        <Sidebar />
-        <RecommendedVideos />
+        </Routes>
       </div>
 
-      {/* </Router> */}
+      </Router>
     </div>
   );
 }
