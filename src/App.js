@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       {/* <Router> */}
-      <Header />
+      <Header setSearchInput={setSearchInput}/>
 
       {/* <Routes>
         <Route path="/" element={<Home />} />
