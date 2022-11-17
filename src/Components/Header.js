@@ -13,24 +13,8 @@ import { fetchData } from '../Fetch';
 
 
 
-const Header = ({ setSearchInput }) => {
-    const [searchBox, setSearchBox] = useState("")
-
-    const handleUserSearch = (e) => {
-        setSearchBox(e.target.value)
-    }
-
-    useEffect(() => {
-        if(searchBox) {
-            fetchData(searchBox)
-                .then((res) => {
-                    setSearchInput(res)
-                })
-                .catch((err) => {
-                    console.log(err)
-                })
-        }
-    })
+const Header = ({ setSearchInput, searchBox, handleUserSearch }) => {
+    
     return (
         <div className="header">
 
@@ -45,7 +29,7 @@ const Header = ({ setSearchInput }) => {
 
                 <form className="header__input"
                     
-                    onSubmit={(e) => {e.preventDefault()}}>
+                    onSubmit={handleUserSearch}>
                     <input
                         value={searchBox} 
                         onChange={(e) => handleUserSearch(e)}

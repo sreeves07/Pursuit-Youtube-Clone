@@ -1,5 +1,5 @@
 import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './Components/Header';
 import About from './Landing Pages/About';
 import Home from './Landing Pages/Home';
@@ -10,6 +10,26 @@ import './App.css';
 import { fetchData } from './Fetch';
 
 function App() {
+  const [searchBox, setSearchBox] = useState("")
+
+  const handleUserSearch = (e) => {
+    e.preventDefault()
+    setSearchBox(e.target.value)
+    console.log('search submission: ',{searchBox})
+  }
+
+    useEffect(() => {
+        if(searchBox) {
+            fetchData(searchBox)
+                .then((res) => {
+                    setSearchInput(res)
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        }
+    })
+  
 
   console.log(fetchData())
   const [searchInput, setSearchInput] = useState('')
@@ -17,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Header />
+      <Header setSearchInput={setSearchInput} />
       <div className="app__page">
         <Sidebar />
         <Routes>
