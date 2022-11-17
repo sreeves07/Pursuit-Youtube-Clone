@@ -29,13 +29,13 @@ const Sidebar = () => {
             
             <SideBarRow Icon={SubscriptionIcon} title="Trending" />
             <hr />
-            {/* <SideBarRow Icon={VideoLibraryIcon} title="Library" />
-                <SideBarRow Icon={HistoryIcon} title="History" />
-                <SideBarRow Icon={OndemandIcon} title="Your Videos" />
-                <SideBarRow Icon={WatchLaterIcon} title="Watch Later" />
-                <SideBarRow Icon={ThumbUpAltOutlinedIcon} title="Liked Videos" />
-                <SideBarRow Icon={ExpandMoreOutlinedIcon} title="Show more" />
-                <hr /> */}
+            <SideBarRow Icon={VideoLibraryIcon} title="Library" />
+            <SideBarRow Icon={HistoryIcon} title="History" />
+            <SideBarRow Icon={OndemandIcon} title="Your Videos" />
+            <SideBarRow Icon={WatchLaterIcon} title="Watch Later" />
+            <SideBarRow Icon={ThumbUpAltOutlinedIcon} title="Liked Videos" />
+            <SideBarRow Icon={ExpandMoreOutlinedIcon} title="Show more" />
+            <hr />
         </div>
     );
 };
