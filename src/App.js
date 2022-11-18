@@ -12,7 +12,7 @@ import { fetchData } from './Fetch';
 function App() {
   const [searchBox, setSearchBox] = useState("")
   const [searched, setSearched] = useState(false)
-  const [searchedVideos, setSearchedVideos] = useState([])
+  const [searchedVideos, setSearchedVideos] = useState({})
 
   const handleUserSearch = (e) => {
     setSearched(true)
@@ -32,8 +32,9 @@ function App() {
           setSearched(false)
             fetchData(searchBox)
                 .then((res) => {
-                    setSearchInput(res)
+                    console.log('our .then is working')
                     setSearchedVideos(res)
+                    // setSearchedVideos(res)
                 })
                 .catch((err) => {
                     console.log(err)
@@ -44,7 +45,9 @@ function App() {
 
   console.log(fetchData())
   const [searchInput, setSearchInput] = useState('')
+  // console.log('Search: ', searchedVideos)
 
+  console.log(searchedVideos)
   return (
     <div className="App">
       <Router>
@@ -52,7 +55,7 @@ function App() {
       <div className="app__page">
         <Sidebar />
         <Routes>
-        <Route path="/" element={<RecommendedVideos searchInput={searchInput} setSearchInput={setSearchInput}/>} />
+        <Route path="/" element={<RecommendedVideos searchedVideos={searchedVideos}  searchInput={searchInput} setSearchInput={setSearchInput}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/videos/:id" element={<VideoCard searchInput={searchInput}/>} />
         <Route path="/videos" element={<RecommendedVideos />} />
