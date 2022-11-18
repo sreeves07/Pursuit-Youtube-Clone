@@ -11,19 +11,27 @@ import { fetchData } from './Fetch';
 
 function App() {
   const [searchBox, setSearchBox] = useState("")
-  const [searchInput, setSearchInput] = useState('')
 
   const handleUserSearch = (e) => {
+    setSearched(true)
     e.preventDefault()
     setSearchBox(e.target.value)
     console.log('search submission: ',{searchBox})
   }
 
+  const handleUserTextChange = (e) => {
+    e.preventDefault()
+    setSearchBox(e.target.value)
+    console.log('search change: ',{searchBox})
+  }
+
     useEffect(() => {
-        if(searchBox) {
+        if(searched) {
+          setSearched(false)
             fetchData(searchBox)
                 .then((res) => {
                     setSearchInput(res)
+                    setSearchedVideos(res)
                 })
                 .catch((err) => {
                     console.log(err)
@@ -32,13 +40,13 @@ function App() {
     })
   
 
-  // console.log(fetchData())
-  
+  console.log(fetchData())
+  const [searchInput, setSearchInput] = useState('')
 
   return (
     <div className="App">
       <Router>
-      <Header setSearchInput={setSearchInput} handleUserSearch={handleUserSearch} searchBox={searchBox}/>
+      <Header setSearchInput={setSearchInput} searchBox={searchBox} handleUserSearch={handleUserSearch} handleUserTextChange={handleUserTextChange}/>
       <div className="app__page">
         <Sidebar />
         <Routes>
