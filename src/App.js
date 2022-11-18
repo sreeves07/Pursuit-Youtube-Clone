@@ -11,7 +11,6 @@ import { fetchData } from './Fetch';
 
 function App() {
   const [searchBox, setSearchBox] = useState("")
-  const [searchInput, setSearchInput] = useState('')
 
   const handleUserSearch = (e) => {
     e.preventDefault()
@@ -32,8 +31,8 @@ function App() {
     })
   
 
-  // console.log(fetchData())
-  
+  console.log(fetchData())
+  const [searchInput, setSearchInput] = useState('')
 
   return (
     <div className="App">
