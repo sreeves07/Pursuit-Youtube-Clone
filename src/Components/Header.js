@@ -13,7 +13,7 @@ import { fetchData } from '../Fetch';
 
 
 
-const Header = ({ setSearchInput, searchBox, handleUserSearch }) => {
+const Header = ({ setSearchInput, searchBox, handleUserSearch, handleUserTextChange }) => {
     
     return (
         <div className="header">
@@ -32,7 +32,7 @@ const Header = ({ setSearchInput, searchBox, handleUserSearch }) => {
                     onSubmit={handleUserSearch}>
                     <input
                         value={searchBox} 
-                        onChange={(e) => handleUserSearch(e)}
+                        onChange={(e) => handleUserTextChange(e)}
                         type="text" 
                         placeholder="Search" />
                     <button type="submit">
