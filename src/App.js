@@ -11,6 +11,8 @@ import { fetchData } from './Fetch';
 
 function App() {
   const [searchBox, setSearchBox] = useState("")
+  const [searched, setSearched] = useState(false)
+  const [searchedVideos, setSearchedVideos] = useState([])
 
   const handleUserSearch = (e) => {
     setSearched(true)
