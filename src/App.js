@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router,Routes, Route, } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import Header from './Components/Header';
 import About from './Landing Pages/About';
@@ -52,7 +52,7 @@ function App() {
       <div className="app__page">
         <Sidebar />
         <Routes>
-        <Route path="/" element={<RecommendedVideos/>} />
+        <Route path="/" element={<RecommendedVideos searchInput={searchInput} setSearchInput={setSearchInput}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/videos/:id" element={<VideoCard searchInput={searchInput}/>} />
         <Route path="/videos" element={<RecommendedVideos />} />
