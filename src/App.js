@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router,Routes, Route, } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import Header from './Components/Header';
 import About from './Landing Pages/About';
@@ -11,6 +11,7 @@ import { fetchData } from './Fetch';
 
 function App() {
   const [searchBox, setSearchBox] = useState("")
+  const [searchInput, setSearchInput] = useState('')
 
   const handleUserSearch = (e) => {
     e.preventDefault()
@@ -31,17 +32,17 @@ function App() {
     })
   
 
-  console.log(fetchData())
-  const [searchInput, setSearchInput] = useState('')
+  // console.log(fetchData())
+  
 
   return (
     <div className="App">
       <Router>
-      <Header setSearchInput={setSearchInput} />
+      <Header setSearchInput={setSearchInput} handleUserSearch={handleUserSearch} searchBox={searchBox}/>
       <div className="app__page">
         <Sidebar />
         <Routes>
-        <Route path="/" element={<RecommendedVideos/>} />
+        <Route path="/" element={<RecommendedVideos searchInput={searchInput} setSearchInput={setSearchInput}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/videos/:id" element={<VideoCard searchInput={searchInput}/>} />
         <Route path="/videos" element={<RecommendedVideos />} />

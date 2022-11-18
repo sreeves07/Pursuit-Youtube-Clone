@@ -15,7 +15,7 @@ const Home = () => {
         <div className="app__page">
           <Sidebar />
           <Routes>
-          <RecommendedVideos />
+            <RecommendedVideos />
           </Routes>
         </div>
         

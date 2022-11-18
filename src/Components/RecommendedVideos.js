@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import VideoCard from './VideoCard'
 import './RecommendedVideos.css'
 
-const RecommendedVideos = () => {
+const RecommendedVideos = ({ searchInput, setSearchInput }) => {
     // useEffect(() => {
     //     fetchData()
     //         .then((data) => console.log(data))

@@ -9,11 +9,10 @@ import AppsIcon from '@material-ui/icons/Apps';
 import NotificationIcon from '@material-ui/icons/Notifications';
 import Avatar from '@material-ui/core/Avatar';
 
-import { fetchData } from '../Fetch';
 
 
 
-const Header = ({ setSearchInput, searchBox, handleUserSearch }) => {
+const Header = ({ searchBox, handleUserSearch }) => {
     
     return (
         <div className="header">
