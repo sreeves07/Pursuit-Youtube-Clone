@@ -895,9 +895,9 @@ function App() {
   }
 
   const handleUserTextChange = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     setSearchBox(e.target.value)
-    console.log('search change: ',{searchBox})
+    // console.log('search change: ',{searchBox})
   }
 
     useEffect(() => {
