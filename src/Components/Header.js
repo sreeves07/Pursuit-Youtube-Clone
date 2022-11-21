@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import './Header.css'
 
@@ -12,7 +12,7 @@ import Avatar from '@material-ui/core/Avatar';
 
 
 
-const Header = ({ setSearchInput, searchBox, handleUserSearch, handleUserTextChange }) => {
+const Header = ({ handleUserSearch, handleUserTextChange }) => {
     
     return (
         <div className="header">
@@ -27,11 +27,9 @@ const Header = ({ setSearchInput, searchBox, handleUserSearch, handleUserTextCha
             </div>
 
                 <form className="header__input"
-                    
                     onSubmit={handleUserSearch}>
                     <input
-                        value={searchBox} 
-                        onChange={(e) => handleUserTextChange(e)}
+                        onChange={handleUserTextChange}
                         type="text" 
                         placeholder="Search" />
                     <button type="submit">
