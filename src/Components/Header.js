@@ -12,7 +12,7 @@ import Avatar from '@material-ui/core/Avatar';
 
 
 
-const Header = ({ handleUserSearch, handleUserTextChange }) => {
+const Header = ({  handleUserSearch, handleUserTextChange }) => {
     
     return (
         <div className="header">

@@ -2,11 +2,12 @@ import {BrowserRouter as Router,Routes, Route, } from 'react-router-dom'
 import { useState } from 'react';
 import Header from './Components/Header';
 import About from './Landing Pages/About';
-import VideoCard from './Components/VideoCard';
 import Sidebar from './Components/Sidebar'
-import RecommendedVideos from './Components/RecommendedVideos';
+import SearchResults from './Components/SearchResults';
 import './App.css';
 import { fetchData } from './Fetch';
+import ErrorMessage from './Components/ErrorMessage';
+import OneVideo from './Components/OneVideo';
 
 function App() {
   const [searchBox, setSearchBox] = useState("")
@@ -17,6 +18,7 @@ function App() {
     e.preventDefault()
     fetchData(searchBox)
       .then((data) => {
+        setSearchBox("")
         setSearchedVideos(data.items)
       })
       .catch((err) => {
@@ -33,14 +35,14 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Header  handleUserSearch={handleUserSearch} handleUserTextChange={handleUserTextChange} searchBox={searchBox}/>
+      <Header handleUserSearch={handleUserSearch} handleUserTextChange={handleUserTextChange}/>
       <div className="app__page">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<RecommendedVideos searchedVideos={searchedVideos}/>} />
+          <Route path="/" element={<SearchResults searchedVideos={searchedVideos}/>} />
           <Route path="/about" element={<About />} />
-          <Route path="/videos/:id" element={<VideoCard />} />
-          <Route path="/videos" element={<RecommendedVideos />} />
+          <Route path="/videos/:id" element={<OneVideo />} />
+          <Route path="*" element={<ErrorMessage />} />
         </Routes>
       </div>
 
