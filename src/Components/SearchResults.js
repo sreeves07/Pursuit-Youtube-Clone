@@ -12,7 +12,6 @@ const SearchResults = ({ searchedVideos }) => {
                     return ( 
                         <div className="video" key={video.id.videoId || video.id.channelId}>
                             <VideoCard video={video}/>
-                            <hr></hr>
                         </div>
                     )}) : null
                 }

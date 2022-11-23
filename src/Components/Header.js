@@ -13,7 +13,7 @@ import Avatar from '@material-ui/core/Avatar';
 
 
 
-const Header = ({  handleUserSearch, handleUserTextChange }) => {
+const Header = ({  handleUserSearch, handleUserTextChange, searchBox }) => {
     
     return (
         <div className="header">
@@ -33,6 +33,7 @@ const Header = ({  handleUserSearch, handleUserTextChange }) => {
                 <form className="header__input"
                     onSubmit={handleUserSearch}>
                     <input
+                        value={searchBox}
                         onChange={handleUserTextChange}
                         type="text" 
                         placeholder="Search" />

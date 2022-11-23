@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Header handleUserSearch={handleUserSearch} handleUserTextChange={handleUserTextChange}/>
+      <Header handleUserSearch={handleUserSearch} handleUserTextChange={handleUserTextChange} searchBox={searchBox}/>
       <div className="app__page">
         <Sidebar />
         <Routes>
