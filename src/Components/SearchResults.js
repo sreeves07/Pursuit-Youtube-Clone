@@ -7,7 +7,6 @@ const SearchResults = ({ searchedVideos }) => {
 
     return (
         <div className='recommendedVideos'>
-            <h2>search results</h2>
             <div className='recommendedVideos__videos'>
                 { searchedVideos.length > 0 ? searchedVideos.map((video) => {
                     return ( 
