@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
-import About from './About';
+import {BrowserRouter as Routes} from 'react-router-dom'
+
 import Header from '../Components/Header';
 import Sidebar from '../Components/Sidebar'
-import VideoCard from '../Components/VideoCard';
+
 import RecommendedVideos from '../Components/RecommendedVideos';
 import "../App.css";
 
