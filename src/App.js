@@ -11,10 +11,10 @@ import OneVideo from './Components/OneVideo';
 
 function App() {
   const [searchBox, setSearchBox] = useState("")
-  const [errorModal, setErrorModal] = useState(false)
+  // const [errorModal, setErrorModal] = useState(false)
   const [searchedVideos, setSearchedVideos] = useState([])
 
-  const handleClose = () => setErrorModal(false);
+  // const handleClose = () => setErrorModal(false);
 
   const handleUserSearch = (e) => {
     e.preventDefault()
@@ -24,7 +24,7 @@ function App() {
         setSearchedVideos(data.items)
       })
       .catch((err) => {
-        setErrorModal(true)
+        console.log(err)
       })
       
   }
@@ -44,7 +44,7 @@ function App() {
           <Route path="/" element={<SearchResults searchedVideos={searchedVideos}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/videos/:id" element={<OneVideo />} />
-          <Route path="*" element={<ErrorMessage handleClose={handleClose} errorModal={errorModal}/>} />
+          <Route path="*" element={<ErrorMessage />} />
         </Routes>
       </div>
 
