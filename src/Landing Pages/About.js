@@ -7,7 +7,8 @@ const About = () => {
         <div>
             <div className="about_section" style={{textAlign: "center"}}>
                 <h1>The Creators</h1>
-                <p>Currently, We aew technical fellows with Pursuit's full-stack software engineering fellowship. Planning to utilize my skills from the fellowship into creating beautiful and accessible web-spaces and applications for users to explore.</p>
+                <p>Currently, We are technical fellows with Pursuit's full-stack software engineering fellowship. Planning to utilize our skills from the fellowship into creating beautiful and accessible web-spaces and applications for users to explore.</p>
+                <p>This app uses Youtube's API and React to search Youtube's database of videos and display it on the screen</p>
             </div>
             <h2 style={{textAlign: "center"}}>Our Team</h2>
 
