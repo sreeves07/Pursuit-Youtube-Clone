@@ -33,7 +33,7 @@ const ErrorMessage = ({errorModal, handleClose}) => {
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
           Please try your search again!
-          <Link to={`/`}><Button>X</Button></Link>
+          <Link to={"/"}><Button>X</Button></Link>
           </Typography>
         </Box>
       </Modal>
