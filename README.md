@@ -1,7 +1,5 @@
 # Youtube Clone Project 
 
-![Home page](./assets/homepage.png)
-
 This app uses Youtube's API and React to search Youtube's database of videos and display it on the screen
 
 Developers: Shamar Reeves & Jahaad Petty
