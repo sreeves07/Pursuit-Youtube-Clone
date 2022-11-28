@@ -6,7 +6,6 @@ import Sidebar from './Components/Sidebar'
 import SearchResults from './Components/SearchResults';
 import './App.css';
 import { fetchData } from './Fetch';
-import ErrorMessage from './Components/ErrorMessage';
 import OneVideo from './Components/OneVideo';
 
 function App() {
