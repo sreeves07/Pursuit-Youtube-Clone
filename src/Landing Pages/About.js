@@ -25,7 +25,7 @@ const About = () => {
                 <div className="container">
                     <h2>Jahaad Petty</h2>
                     <p className="title">Developer</p>
-                    <p>A student of the world, Shamar is fluent in several languages including Spanish and Jamaican Patois. He enjoys research and adding to his collection of interesting facts. His favorite moments away from tech and real estate include walks, traveling to different islands, playing basketball, mentoring his younger siblings, and using my love for fashion to style outfits.</p>
+                    <p></p>
                     <p>jp@dev.com</p>
                     <p><button className="button">Contact</button></p>
                 </div>
