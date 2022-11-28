@@ -19,7 +19,7 @@ const RelatedVideos = () => {
     },[id])
     return (
         <div>
-            {relatedVideos.length > 0 && relatedVideos.map((video) => {
+            {relatedVideos?.length > 0 && relatedVideos.map((video) => {
                 return (
                     <ul>
                         <li key={id}>
