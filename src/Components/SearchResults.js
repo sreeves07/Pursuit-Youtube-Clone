@@ -8,7 +8,7 @@ const SearchResults = ({ searchedVideos }) => {
     return (
         <div className='recommendedVideos'>
             <div className='recommendedVideos__videos'>
-                {searchedVideos.length === 0 && <p>No Search Results Yet! Please submit a search above!</p>}
+                {searchedVideos?.length === 0 && <p>No Search Results Yet! Please submit a search above!</p>}
                 { searchedVideos.length > 0 ? searchedVideos.map((video) => {
                     return ( 
                         <div className="video" key={video.id.videoId || video.id.channelId}>
