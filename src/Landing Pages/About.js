@@ -26,7 +26,7 @@ const About = () => {
                 <div className="container">
                     <h2>Jahaad Petty</h2>
                     <p className="title">Developer</p>
-                    <p></p>
+                    <p>Born and raised in New York - passion for technology,</p>
                     <p>jp@dev.com</p>
                     <p><button className="button">Contact</button></p>
                 </div>
