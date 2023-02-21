@@ -2,6 +2,9 @@
 
 This app uses Youtube's API and React to search Youtube's database of videos and display it on the screen
 
+<br>
+Netlify Deployed Link: https://stellar-pastelito-74a0b3.netlify.app/
+
 Developers: Shamar Reeves & Jahaad Petty
 
 <hr>
